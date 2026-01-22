@@ -1,0 +1,161 @@
+.my-posts-page {
+  padding: 2rem 0;
+  min-height: calc(100vh - 70px);
+}
+
+.my-posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.my-posts-header h1 {
+  color: var(--primary-color);
+}
+
+.my-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.my-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.my-post-content {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.my-post-image {
+  width: 200px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.my-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.my-post-info {
+  flex: 1;
+}
+
+.my-post-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-post-info h2 a {
+  color: var(--light-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .my-post-info h2 a {
+  color: var(--dark-text);
+}
+
+.my-post-info h2 a:hover {
+  color: var(--primary-color);
+}
+
+.my-post-excerpt {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.my-post-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+
+.post-date {
+  color: #9ca3af;
+}
+
+.post-stats {
+  display: flex;
+  gap: 0.75rem;
+  color: #6b7280;
+}
+
+.post-status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.post-status.published {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.post-status.draft {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.my-post-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 3rem;
+}
+
+.no-posts p {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .my-posts-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .my-post-item {
+    flex-direction: column;
+  }
+
+  .my-post-content {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .my-post-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .my-post-actions {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .my-post-actions button,
+  .my-post-actions a {
+    flex: 1;
+  }
+}
